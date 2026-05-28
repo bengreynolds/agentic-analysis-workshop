@@ -42,11 +42,31 @@ Participants need access to:
 
 Sign in to GitHub from VS Code before the workshop if possible.
 
+### 4. Clone This Repository
+
+Open Anaconda Prompt, Terminal, or PowerShell and navigate to your Documents folder:
+
+```bash
+cd ~/Documents
+```
+
+Clone the workshop repository:
+
+```bash
+git clone https://github.com/bengreynolds/agentic-analysis-workshop.git
+```
+
+Navigate into the cloned repository folder:
+
+```bash
+cd agentic-analysis-workshop
+```
+
 ## Python Environment
 
 This repository includes a starter Conda environment file at `environment.yaml`.
 
-Create the environment from the repository root:
+Create the environment from the cloned repository folder:
 
 ```bash
 conda env create -f environment.yaml
@@ -84,6 +104,7 @@ Before the workshop, confirm that you have:
 - Codex extension installed in VS Code
 - A GitHub account
 - An OpenAI account
+- This repository cloned into your Documents folder
 - The `agentic-analysis-workshop` Conda environment created
 
 ## Repository Contents
