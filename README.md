@@ -64,22 +64,24 @@ cd agentic-analysis-workshop
 
 ### Optional: Use the Prebuilt Codex AGENTS.md
 
-If you want to use the provided Codex agent instructions, move `AGENTS.md` from the cloned repository into your global Codex configuration folder.
+If you want to use the provided Codex agent instructions globally, copy `AGENTS.md` from the cloned repository into your global Codex configuration folder.
 
 If you want to experiment with your own Codex configuration, skip this step.
 
-From the cloned repository folder, run these commands in PowerShell:
-
-```powershell
-New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.codex"
-Move-Item -Path ".\AGENTS.md" -Destination "$env:USERPROFILE\.codex\AGENTS.md" -Force
-```
-
-This places the file at:
+On Windows, the global Codex configuration folder is:
 
 ```text
-C:\Users\<your-username>\.codex\AGENTS.md
+C:\Users\<your-username>\.codex
 ```
+
+To use the prebuilt file:
+
+1. Open the cloned `agentic-analysis-workshop` folder in File Explorer.
+2. Copy the `AGENTS.md` file.
+3. Open your user folder, then open `.codex`. Create the `.codex` folder if it does not already exist.
+4. Paste `AGENTS.md` into `.codex`.
+
+After copying, the file should be located at `C:\Users\<your-username>\.codex\AGENTS.md`.
 
 ## Python Environment
 
@@ -123,7 +125,7 @@ Before the workshop, confirm that you have:
 - Codex extension installed in VS Code
 - Access to your GitHub and OpenAI accounts
 - This repository cloned into your Documents folder
-- Optional: the prebuilt `AGENTS.md` moved to `C:\Users\<your-username>\.codex\AGENTS.md`
+- Optional: the prebuilt `AGENTS.md` copied to `C:\Users\<your-username>\.codex\AGENTS.md`
 - The `agentic-analysis-workshop` Conda environment created
 
 ## Repository Contents
