@@ -1,0 +1,11 @@
+name: agentic-analysis-workshop
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - matplotlib
+  - plotly
+  - numpy
+  - wxpython
+  - pyside6
+  - pyyaml
