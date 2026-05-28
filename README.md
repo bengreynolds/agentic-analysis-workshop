@@ -33,33 +33,52 @@ After installing VS Code, install these extensions:
 
 You can install extensions from the VS Code Extensions panel.
 
-### 3. Create Required Accounts
+### 3. Confirm Account Access
 
-Participants need access to:
+Most participants may already have these accounts. Before the workshop, confirm you can sign in to:
 
 - A GitHub account: https://github.com/
 - An OpenAI account: https://platform.openai.com/
 
-Sign in to GitHub from VS Code before the workshop if possible.
+If prompted during setup, sign in to GitHub from VS Code and sign in to OpenAI from the Codex extension.
 
 ### 4. Clone This Repository
 
-Open Anaconda Prompt, Terminal, or PowerShell and navigate to your Documents folder:
+Open PowerShell or Anaconda PowerShell Prompt and navigate to your Documents folder:
 
-```bash
-cd ~/Documents
+```powershell
+cd "$env:USERPROFILE\Documents"
 ```
 
 Clone the workshop repository:
 
-```bash
+```powershell
 git clone https://github.com/bengreynolds/agentic-analysis-workshop.git
 ```
 
 Navigate into the cloned repository folder:
 
-```bash
+```powershell
 cd agentic-analysis-workshop
+```
+
+### Optional: Use the Prebuilt Codex AGENTS.md
+
+If you want to use the provided Codex agent instructions, move `AGENTS.md` from the cloned repository into your global Codex configuration folder.
+
+If you want to experiment with your own Codex configuration, skip this step.
+
+From the cloned repository folder, run these commands in PowerShell:
+
+```powershell
+New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.codex"
+Move-Item -Path ".\AGENTS.md" -Destination "$env:USERPROFILE\.codex\AGENTS.md" -Force
+```
+
+This places the file at:
+
+```text
+C:\Users\<your-username>\.codex\AGENTS.md
 ```
 
 ## Python Environment
@@ -102,9 +121,9 @@ Before the workshop, confirm that you have:
 - VS Code installed
 - GitHub Pull Requests extension installed in VS Code
 - Codex extension installed in VS Code
-- A GitHub account
-- An OpenAI account
+- Access to your GitHub and OpenAI accounts
 - This repository cloned into your Documents folder
+- Optional: the prebuilt `AGENTS.md` moved to `C:\Users\<your-username>\.codex\AGENTS.md`
 - The `agentic-analysis-workshop` Conda environment created
 
 ## Repository Contents

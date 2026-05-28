@@ -1,0 +1,33 @@
+I want to make a small standalone Python thing for ReachX figures (trajectory path, color = speed). Don’t change ReachX itself or any ReachX outputs.
+
+Use temp/ as reference only — it has ReachX source + example output/session stuff. Also make sure temp/ is in .gitignore and doesn’t get tracked.
+
+Need to support both ReachX formats (fixed-cam and legacy)
+
+Can either auto-detect the format or let me pick it manually. If it’s not obvious, stop and ask.
+
+Important: use curated reaches only (not algorithm/scored reaches). If curated reach data is missing/weird/unclear, stop and tell me instead of guessing.
+
+Script behavior:
+
+open file dialog to select session folder
+choose single reach or all reaches
+single reach = one figure for one curated reach
+all reaches = one combined figure with all curated reaches, not separate figures
+2D plot = y position on plot x-axis, z position on plot y-axis
+3D plot = live Plotly figure with editable/rotatable view and visible axes
+color-code trajectory by speed with a smooth continuous heatmap
+include colorbar + units
+label axes
+title with session/reach info
+save 2D PNG/PDF to figures/
+save 3D interactive HTML to figures/
+
+Project files:
+
+standalone Python script
+README.md (conda setup, installs incl. plotly, usage, inputs/outputs, assumptions, validation, troubleshooting)
+project AGENTS.md (rules: bounded changes, no ReachX edits, no raw data edits, simple code, stop when assumptions fail)
+planning markdown file (scope, structure, strategy, risks, validation, staged plan)
+
+review the task and examples. report the plan back to me for iteration/review before making code changes. do not start editing code yet until the plan has been approved. create all markdown files, but wait for script writing. 
