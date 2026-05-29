@@ -130,5 +130,70 @@ Before the workshop, confirm that you have:
 
 ## Repository Contents
 
-- `README.md`: setup instructions for workshop participants
-- `environment.yaml`: starter Conda environment for the data analysis example
+- `README.md`: setup instructions and workshop content overview
+- `environment.yaml`: starter Conda environment
+- `AGENTS.md`: optional global Codex instruction file
+- `agentic-coding-small-edits/`: short warm-up exercises for focused agent edits
+- `example-worksheet/`: main intentionally incomplete learner notebook
+- `velo-example/`: completed ReachX trajectory-speed example and generated outputs
+- `temp/reachx/`: reference ReachX source files for context
+
+## Workshop Content
+
+This repository contains both setup materials and workshop exercises.
+
+### Setup And Configuration
+
+- `README.md`: participant-facing setup instructions and repository overview.
+- `environment.yaml`: starter Conda environment for the workshop.
+- `AGENTS.md`: optional prebuilt Codex instruction file. Participants can copy this into their global Codex configuration if they want to start from the workshop agent behavior.
+
+### Small Agentic Coding Exercises
+
+The `agentic-coding-small-edits/` folder contains short, intentionally flawed Python examples for practicing focused Codex prompts. These exercises are meant to teach small, reviewable agent interactions before moving into the larger notebook workflow.
+
+Exercises cover:
+
+- readability cleanup
+- syntax and import fixes
+- variable naming cleanup
+- NumPy shape/debugging logic
+- simple performance optimization
+- Matplotlib subplot refactoring
+
+Each exercise has an `ISSUES.md` file that describes the intended practice target.
+
+### Main Worksheet Exercise
+
+The `example-worksheet/` folder contains the main learner-facing Jupyter notebook:
+
+```text
+example-worksheet/reachx_agentic_worksheet.ipynb
+```
+
+This notebook is intentionally incomplete. It looks close to a finished data-analysis notebook, but it contains missing setup, data-loading, validation, selection, plotting, metric, filename, and reporting steps. Participants should work through it cell by cell with an agent, using notebook errors and local context to decide what to ask for next.
+
+The purpose is to practice agentic workflows such as:
+
+- asking for small edits instead of full rewrites
+- giving the agent local context
+- reviewing diffs before continuing
+- debugging from tracebacks
+- keeping analysis code readable for novice users
+
+### Worked Velocity Example
+
+The `velo-example/` folder contains a more complete ReachX trajectory-speed example. It includes:
+
+- `reachx_trajectory_speed_figures.py`: a standalone Python script.
+- `reachx_trajectory_speed_figures.ipynb`: a linear notebook version of the same analysis.
+- `README.md`: documentation for the worked example.
+- `PLANNING.md`: planning notes, assumptions, and validation logic.
+- `figures/`: example generated outputs.
+- prompt text files showing how the task was framed.
+
+This folder is useful for instructor review and for showing what a more complete version of the analysis can look like. During the worksheet exercise, participants should treat `example-worksheet/` as the exercise context instead of copying from this completed example.
+
+### Reference ReachX Files
+
+The `temp/reachx/` folder contains a reference copy of ReachX source files and documentation used to provide realistic analysis context. It is not the primary exercise folder, and participants should not edit it during the workshop unless explicitly instructed.
